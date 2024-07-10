@@ -3,20 +3,21 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: ".Ponto",
+  title: ".ponto",
   tagline: "Dataset de pontos de Umbanda.",
   favicon: "img/logo-dark.svg",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://lvcarnevalli.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/ponto/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "LVCarnevalli", // Usually your GitHub org/user name.
+  projectName: "ponto", // Usually your repo name.
+  trailingSlash: false,
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -58,7 +59,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/social-card.png",
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -70,7 +71,7 @@ const config: Config = {
     navbar: {
       title: "",
       logo: {
-        alt: ".Ponto Logo",
+        alt: ".ponto Logo",
         src: "img/logo-dark.svg",
         srcDark: "img/logo-white.svg",
       },
