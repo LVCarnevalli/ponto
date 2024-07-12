@@ -40,12 +40,14 @@ jobs:
       id-token: write # to verify the deployment originates from an appropriate source
 
     # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    # environment:
+    #   name: github-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
     steps:
+      #  - name: Deploy to GitHub Pages
+      #    id: deployment
+      #    uses: actions/deploy-pages@v4
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        run: npm run deploy
