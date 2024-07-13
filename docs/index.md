@@ -2,7 +2,7 @@
 hide_table_of_contents: true
 sidebar_position: 1
 sidebar_label: .ponto
-title: Index
+title: Umbanda
 ---
 
 # .ponto
