@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "build-docs": "node build-docs.js",
-    "build-search": "node buid-search.js"
+    "build-search": "node build-search.js"
   },
   "dependencies": {
     "@docusaurus/core": "3.4.0",
