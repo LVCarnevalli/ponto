@@ -1,0 +1,10 @@
+{
+    "theme.SearchModal.placeholder": {
+        "message": "Buscar pontos",
+        "description": "The placeholder of the input of the DocSearch pop-up modal"
+    },
+    "theme.SearchModal.footer.searchByText": {
+        "message": "",
+        "description": "The text explain that the search is making by Algolia"
+    }
+}

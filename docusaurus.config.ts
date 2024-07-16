@@ -26,8 +26,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "pt-BR",
+    locales: ["pt-BR"],
   },
 
   presets: [
@@ -62,6 +62,14 @@ const config: Config = {
   ],
 
   themeConfig: {
+    algolia: {
+      appId: "B07SKEC0RQ",
+      apiKey: "4cec4eeba5d5a125c4725d5cb351d007",
+      indexName: "prod_ponto",
+      contextualSearch: true,
+      searchPagePath: false,
+      insights: false,
+    },
     // Replace with your project's social card
     image: "img/social-card.png",
     colorMode: {
