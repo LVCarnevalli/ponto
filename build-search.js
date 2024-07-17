@@ -11,7 +11,9 @@ function extractData(fileContent) {
   const titleMatch = content.match(/#\s(.+)\n/);
   const letraMatch = content.match(/### Letra\n\n```text\n([\s\S]*?)```/);
   const title = titleMatch ? titleMatch[1] : null;
-  const lyrics = letraMatch ? letraMatch[1].trim() : null;
+  const lyrics = letraMatch
+    ? letraMatch[1].trim().replace(/\(\d+x\)/g, "")
+    : null;
   if (title && lyrics) {
     return {
       title,
