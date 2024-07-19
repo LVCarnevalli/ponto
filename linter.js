@@ -70,6 +70,22 @@ ${newFrontmatter.trim()}
 ---`;
 }
 
+function checkForUnexpectedParentheses(filename, content) {
+  // Regex para encontrar qualquer parêntese
+  const allParenthesesRegex = /\(([^)]+)\)/g;
+  let match;
+  while ((match = allParenthesesRegex.exec(content)) !== null) {
+    const value = match[1];
+    // Regex para encontrar padrões válidos como (1x), (2x), (3x), etc.
+    const validPatternRegex = /^\d+x$/;
+    if (!validPatternRegex.test(value)) {
+      console.warn(
+        `Alerta: Encontrado parênteses inesperado "(${value})" no arquivo ${filename}`
+      );
+    }
+  }
+}
+
 async function processFiles() {
   const directory = "docs";
   const replacementsFile = "replacements.json";
@@ -106,6 +122,8 @@ async function processFiles() {
     if (newFilePath !== file) {
       await fs.remove(file);
     }
+
+    checkForUnexpectedParentheses(newFilePath, content);
   }
 }
 
